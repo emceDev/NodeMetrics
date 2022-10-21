@@ -1,5 +1,5 @@
-const whitelist = ["siemens", "avon", "agreos"];
 export const urlCheck = (req, res, next) => {
+	const whitelist = JSON.parse(process.env.WHITELIST);
 	// console.log("checker", req.url, whitelist);
 
 	const x = whitelist.find((e) => e === req.url.replace("/", ""));
