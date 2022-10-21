@@ -6,7 +6,7 @@
 /tempaltes/
 # testing
 /coverage
-
+/metrics/*
 # production
 /build
 

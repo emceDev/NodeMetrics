@@ -1,4 +1,4 @@
-const whitelist = ["siemens", "avon"];
+const whitelist = ["siemens", "avon", "agreos"];
 export const urlCheck = (req, res, next) => {
 	// console.log("checker", req.url, whitelist);
 
@@ -8,7 +8,7 @@ export const urlCheck = (req, res, next) => {
 		console.log("check passed");
 		next();
 	} else {
-		console.log("url not whitelisted");
+		console.log("url not whitelisted", req.url);
 		return "bad";
 	}
 };
